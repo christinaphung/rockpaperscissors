@@ -1,0 +1,1 @@
+This is my code for the Rock Paper Scissors Project for the Odin Project. Still very hard for me to do. 
