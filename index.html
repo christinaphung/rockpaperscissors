@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 
 <script>
-/*Rock blunts scissors
-Paper covers rock
-Scissors cut paper$/
 
-/*Your game is going to play against the computer, so begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play.*/
+/*function for random choice by computer*/
 
 let randomChoice = ["Rock", "Paper", "Scissors"]
 
@@ -13,11 +10,8 @@ let randomChoice = ["Rock", "Paper", "Scissors"]
 		return randomChoice[Math.floor(Math.random()*randomChoice.length)];
 	}
 
-/*Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
+/*function that plays a single round of Rock Paper Scissors. The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
 */
-
-let playerSelection = prompt("Please choose either rock, paper or scissors")
-let computerSelection = ComputerPlay(randomChoice)
 
 function playRockPaperScissors1(playerSelection, computerSelection){
 	if (playerSelection==computerSelection){
@@ -41,7 +35,11 @@ function playRockPaperScissors1(playerSelection, computerSelection){
 function game(i){
  for(let i= 0; i < 5; i++)
 {
-    playRockPaperScissors1(playerSelection, computerSelection);
+	let playerSelection = prompt("Please choose either rock, paper or scissors")
+	
+	let computerSelection = ComputerPlay(randomChoice)
+
+    console.log(playRockPaperScissors1(playerSelection, computerSelection));
 }
 }
 
